@@ -59,7 +59,7 @@ def contact_pre_treatment(file_path, save_path):
     print("处理后文件大小： ", contact.shape)
     contact1.to_csv(save_path, encoding='utf_8_sig', header=True, index=False)
 
-# 数据预处理整体部分，如不关系具体预处理过程，直接使用此部分代码即可
+# 数据预处理整体部分，如不关心具体预处理过程，直接使用此部分代码即可
 def data_pretreatment(message_file_path, contact_file_path):
     message = pd.read_csv(contact_file_path, sep=',', encoding="utf-8", low_memory=False)
     message = message[['type', 'isSend', 'createTime', 'talker', 'content']]
